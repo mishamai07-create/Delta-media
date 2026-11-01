@@ -1,0 +1,3 @@
+{"defaults": {"image": "ltx/in/c0.webp", "w": 512, "h": 896, "frames": 49, "steps": 8, "cfg": 1.0,
+  "prompt": "A young man in a black puffer jacket and black cap stands on a snowy European street at evening, he slowly turns his head and looks around, light snow falls, his jacket moves slightly, static camera, realistic video game cutscene, smooth natural motion"},
+ "items": [{"name": "a"}, {"name": "b", "timesteps": [1000, 993, 987, 981, 975, 909, 725, 0.03]}]}
