@@ -3,6 +3,8 @@ on:
   push:
     paths: ["ltx/jobs/**"]
   workflow_dispatch:
+    inputs:
+      job: {required: false, default: ""}
 permissions:
   contents: write
 concurrency: ltx
@@ -14,10 +16,12 @@ jobs:
       matrix: ${{ steps.p.outputs.matrix }}
     steps:
       - uses: actions/checkout@v4
-        with: {sparse-checkout: ltx, filter: "blob:none", fetch-depth: 1}
+        with: {sparse-checkout: ltx, filter: "blob:none", fetch-depth: 2}
       - id: p
         run: |
-          J=$(ls -t ltx/jobs/*.json | head -1); N=$(basename $J .json)
+          J=$(git diff --name-only HEAD~1 HEAD -- ltx/jobs | grep '\.json$' | tail -1)
+          [ -n "${{ github.event.inputs.job }}" ] && J=ltx/jobs/${{ github.event.inputs.job }}.json
+          N=$(basename $J .json); echo "job $N"
           echo "job=$N" >> $GITHUB_OUTPUT
           echo "matrix=$(python3 -c "import json;print(json.dumps([i['name'] for i in json.load(open('$J'))['items']]))")" >> $GITHUB_OUTPUT
   run:
