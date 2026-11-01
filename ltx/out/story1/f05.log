@@ -1,0 +1,23 @@
+[    0.0s maxrss=  0.4GB] cpu 4 dtype torch.float32 size 512 896 65
+/home/runner/.local/lib/python3.12/site-packages/diffusers/utils/deprecation_utils.py:23: FutureWarning: `torch_dtype` is deprecated and will be removed in version 1.0.0. Please use `dtype` instead.
+  deprecate("torch_dtype", "1.0.0", _TORCH_DTYPE_DEPRECATION_MESSAGE)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading pipeline components...: 100%|██████████| 3/3 [00:50<00:00, 21.16s/it]Loading pipeline components...: 100%|██████████| 3/3 [00:50<00:00, 16.94s/it]
+[  147.5s maxrss= 15.0GB] text encoder loaded
+[  191.9s maxrss= 15.0GB] prompt encoded, text encoder freed
+/home/runner/.local/lib/python3.12/site-packages/huggingface_hub/utils/_validators.py:205: UserWarning: The `local_dir_use_symlinks` argument is deprecated and ignored in `hf_hub_download`. Downloading to a local directory does not use symlinks anymore.
+  warnings.warn(
+There are modules in LTXVideoTransformer3DModel that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKLLTXVideo that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+[  235.0s maxrss= 15.3GB] transformer+vae loaded
+`timesteps` were passed without `sigmas`. The timesteps are used as given, while the sigmas derived from them go through the scheduler's shifting, so the two may not be consistent. Pass `sigmas` to get a shifted schedule, or pass both `sigmas` and `timesteps` to control them separately.
+ 12%|█▎        | 1/8 [01:00<07:04, 60.67s/it][  369.0s maxrss= 15.3GB] step 2 t=993.750 took 60.2s
+ 25%|██▌       | 2/8 [02:00<06:02, 60.40s/it][  430.5s maxrss= 15.3GB] step 3 t=987.500 took 61.4s
+ 38%|███▊      | 3/8 [03:02<05:04, 60.88s/it][  491.9s maxrss= 15.3GB] step 4 t=981.250 took 61.4s
+ 50%|█████     | 4/8 [04:03<04:04, 61.09s/it][  553.2s maxrss= 15.3GB] step 5 t=975.000 took 61.3s
+ 62%|██████▎   | 5/8 [05:05<03:03, 61.16s/it][  614.7s maxrss= 15.3GB] step 6 t=909.375 took 61.5s
+ 75%|███████▌  | 6/8 [06:06<02:02, 61.29s/it][  674.6s maxrss= 15.3GB] step 7 t=725.000 took 59.9s
+ 88%|████████▊ | 7/8 [07:06<01:00, 60.85s/it][  736.1s maxrss= 15.3GB] step 8 t=421.875 took 61.5s
+100%|██████████| 8/8 [08:07<00:00, 61.05s/it]100%|██████████| 8/8 [08:07<00:00, 61.00s/it]
+[  906.3s maxrss= 15.3GB] decoded 65 frames
+[  907.5s maxrss= 15.3GB] DONE

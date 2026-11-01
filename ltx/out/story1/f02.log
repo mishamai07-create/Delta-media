@@ -1,0 +1,31 @@
+[    0.0s maxrss=  0.4GB] cpu 4 dtype torch.float32 size 512 896 65
+/home/runner/.local/lib/python3.12/site-packages/diffusers/utils/deprecation_utils.py:23: FutureWarning: `torch_dtype` is deprecated and will be removed in version 1.0.0. Please use `dtype` instead.
+  deprecate("torch_dtype", "1.0.0", _TORCH_DTYPE_DEPRECATION_MESSAGE)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:  53%|█████▎    | 115/219 [00:23<02:04,  1.20s/it][A
+Loading weights:  53%|█████▎    | 116/219 [00:24<02:03,  1.20s/it][A
+Loading weights:  53%|█████▎    | 117/219 [00:27<02:21,  1.39s/it][A
+Loading weights:  56%|█████▌    | 122/219 [00:29<01:40,  1.03s/it][A
+Loading weights:  57%|█████▋    | 124/219 [00:38<03:28,  2.19s/it][A
+Loading weights:  59%|█████▉    | 130/219 [00:45<02:16,  1.54s/it][A
+Loading weights:  60%|█████▉    | 131/219 [00:45<02:02,  1.39s/it][A
+Loading weights:  61%|██████    | 133/219 [00:47<01:51,  1.29s/it][A
+Loading pipeline components...:  33%|███▎      | 1/3 [01:06<02:13, 66.79s/it]Loading pipeline components...:  67%|██████▋   | 2/3 [01:07<00:27, 27.87s/it]Loading pipeline components...: 100%|██████████| 3/3 [01:07<00:00, 15.21s/it]Loading pipeline components...: 100%|██████████| 3/3 [01:07<00:00, 22.52s/it]
+[  116.8s maxrss= 15.1GB] text encoder loaded
+[  193.5s maxrss= 15.1GB] prompt encoded, text encoder freed
+/home/runner/.local/lib/python3.12/site-packages/huggingface_hub/utils/_validators.py:205: UserWarning: The `local_dir_use_symlinks` argument is deprecated and ignored in `hf_hub_download`. Downloading to a local directory does not use symlinks anymore.
+  warnings.warn(
+There are modules in LTXVideoTransformer3DModel that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKLLTXVideo that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+[  238.6s maxrss= 15.3GB] transformer+vae loaded
+`timesteps` were passed without `sigmas`. The timesteps are used as given, while the sigmas derived from them go through the scheduler's shifting, so the two may not be consistent. Pass `sigmas` to get a shifted schedule, or pass both `sigmas` and `timesteps` to control them separately.
+ 12%|█▎        | 1/8 [02:37<18:19, 157.08s/it][  541.7s maxrss= 15.3GB] step 2 t=993.750 took 121.8s
+ 25%|██▌       | 2/8 [04:38<13:37, 136.32s/it][  651.6s maxrss= 15.3GB] step 3 t=987.500 took 109.9s
+ 38%|███▊      | 3/8 [06:28<10:21, 124.27s/it][  761.5s maxrss= 15.3GB] step 4 t=981.250 took 109.8s
+ 50%|█████     | 4/8 [08:18<07:54, 118.57s/it][  871.5s maxrss= 15.3GB] step 5 t=975.000 took 110.0s
+ 62%|██████▎   | 5/8 [10:08<05:46, 115.48s/it][  981.1s maxrss= 15.3GB] step 6 t=909.375 took 109.7s
+ 75%|███████▌  | 6/8 [11:58<03:47, 113.51s/it][ 1090.3s maxrss= 15.3GB] step 7 t=725.000 took 109.1s
+ 88%|████████▊ | 7/8 [13:47<01:52, 112.07s/it][ 1199.7s maxrss= 15.3GB] step 8 t=421.875 took 109.4s
+100%|██████████| 8/8 [15:36<00:00, 111.22s/it]100%|██████████| 8/8 [15:36<00:00, 117.10s/it]
+[ 1492.1s maxrss= 15.4GB] decoded 65 frames
+[ 1494.0s maxrss= 15.4GB] DONE

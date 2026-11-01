@@ -1,0 +1,43 @@
+[    0.0s maxrss=  0.4GB] cpu 4 dtype torch.float32 size 512 896 73
+/home/runner/.local/lib/python3.12/site-packages/diffusers/utils/deprecation_utils.py:23: FutureWarning: `torch_dtype` is deprecated and will be removed in version 1.0.0. Please use `dtype` instead.
+  deprecate("torch_dtype", "1.0.0", _TORCH_DTYPE_DEPRECATION_MESSAGE)
+Loading weights:   0%|          | 1/219 [00:01<06:52,  1.89s/it][A
+Loading weights:  53%|█████▎    | 115/219 [00:56<04:41,  2.71s/it][A
+Loading weights:  53%|█████▎    | 116/219 [01:00<04:45,  2.77s/it][A
+Loading weights:  53%|█████▎    | 117/219 [01:02<04:32,  2.67s/it][A
+Loading weights:  54%|█████▍    | 118/219 [01:02<03:47,  2.25s/it][A
+Loading weights:  54%|█████▍    | 119/219 [01:02<03:11,  1.91s/it][A
+Loading weights:  56%|█████▌    | 122/219 [01:06<02:39,  1.65s/it][A
+Loading weights:  56%|█████▌    | 123/219 [01:06<02:12,  1.38s/it][A
+Loading weights:  57%|█████▋    | 124/219 [01:17<05:04,  3.21s/it][A
+Loading weights:  57%|█████▋    | 125/219 [01:23<06:00,  3.83s/it][A
+Loading weights:  58%|█████▊    | 127/219 [01:23<03:37,  2.37s/it][A
+Loading weights:  58%|█████▊    | 128/219 [01:23<02:51,  1.88s/it][A
+Loading weights:  59%|█████▉    | 130/219 [01:29<03:20,  2.26s/it][A
+Loading weights:  60%|█████▉    | 131/219 [01:29<02:47,  1.90s/it][A
+Loading weights:  61%|██████    | 133/219 [01:47<06:32,  4.56s/it][A
+Loading weights:  62%|██████▏   | 135/219 [01:47<04:10,  2.98s/it][A
+Loading weights:  63%|██████▎   | 137/219 [01:48<02:45,  2.02s/it][A
+Loading weights:  63%|██████▎   | 138/219 [01:48<02:13,  1.65s/it][A
+Loading weights:  63%|██████▎   | 139/219 [01:48<01:46,  1.34s/it][A
+Loading weights:  64%|██████▍   | 140/219 [01:48<01:24,  1.06s/it][A
+Loading weights:  65%|██████▍   | 142/219 [01:50<01:25,  1.11s/it][A
+Loading pipeline components...: 100%|██████████| 3/3 [02:17<00:00, 57.48s/it]Loading pipeline components...: 100%|██████████| 3/3 [02:17<00:00, 46.00s/it]
+[  246.1s maxrss= 14.7GB] text encoder loaded
+[  425.2s maxrss= 14.7GB] prompt encoded, text encoder freed
+/home/runner/.local/lib/python3.12/site-packages/huggingface_hub/utils/_validators.py:205: UserWarning: The `local_dir_use_symlinks` argument is deprecated and ignored in `hf_hub_download`. Downloading to a local directory does not use symlinks anymore.
+  warnings.warn(
+There are modules in LTXVideoTransformer3DModel that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKLLTXVideo that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+[  476.2s maxrss= 15.4GB] transformer+vae loaded
+`timesteps` were passed without `sigmas`. The timesteps are used as given, while the sigmas derived from them go through the scheduler's shifting, so the two may not be consistent. Pass `sigmas` to get a shifted schedule, or pass both `sigmas` and `timesteps` to control them separately.
+ 12%|█▎        | 1/8 [01:15<08:50, 75.76s/it][  640.8s maxrss= 15.4GB] step 2 t=993.750 took 75.8s
+ 25%|██▌       | 2/8 [02:31<07:34, 75.80s/it][  716.9s maxrss= 15.4GB] step 3 t=987.500 took 76.1s
+ 38%|███▊      | 3/8 [03:47<06:19, 75.94s/it][  792.4s maxrss= 15.4GB] step 4 t=981.250 took 75.5s
+ 50%|█████     | 4/8 [05:03<05:03, 75.76s/it][  868.5s maxrss= 15.4GB] step 5 t=975.000 took 76.1s
+ 62%|██████▎   | 5/8 [06:19<03:47, 75.90s/it][  945.1s maxrss= 15.4GB] step 6 t=909.375 took 76.6s
+ 75%|███████▌  | 6/8 [07:35<02:32, 76.13s/it][ 1021.5s maxrss= 15.4GB] step 7 t=725.000 took 76.4s
+ 88%|████████▊ | 7/8 [08:52<01:16, 76.21s/it][ 1098.3s maxrss= 15.4GB] step 8 t=421.875 took 76.8s
+100%|██████████| 8/8 [10:09<00:00, 76.39s/it]100%|██████████| 8/8 [10:09<00:00, 76.13s/it]
+[ 1285.6s maxrss= 15.5GB] decoded 73 frames
+[ 1287.2s maxrss= 15.5GB] DONE
