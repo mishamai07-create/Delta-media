@@ -1,0 +1,22 @@
+{
+ "defaults": {
+  "script": "run_wan.py",
+  "image": "ltx/in/st/f02.jpg",
+  "prompt": "Cinematic video game cutscene, realistic 3D graphics. A young man in a black puffer jacket walks toward the camera along a snowy European street at dusk, natural confident walking motion, arms swinging, warm street lamps, light snowfall, static camera.",
+  "w": 480,
+  "h": 832,
+  "frames": 49,
+  "tmo": 320,
+  "seed": 3
+ },
+ "items": [
+  {
+   "name": "w32",
+   "compute": "fp32"
+  },
+  {
+   "name": "w16",
+   "compute": "bf16"
+  }
+ ]
+}
