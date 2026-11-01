@@ -1,0 +1,34 @@
+{
+ "defaults": {
+  "image": "ltx/in/c0.webp",
+  "prompt": "Cinematic video game cutscene, realistic 3D render. A young man in a black puffer jacket stands on a snowy European street at dusk, slowly turns his head and looks at the camera, breath vapor, gentle snowfall, warm street lamps, static camera.",
+  "steps": 8,
+  "cfg": 1.0,
+  "fps": 24,
+  "tmo": 150
+ },
+ "items": [
+  {
+   "name": "s32",
+   "w": 384,
+   "h": 672,
+   "frames": 25,
+   "dtype": "float32"
+  },
+  {
+   "name": "s16",
+   "w": 384,
+   "h": 672,
+   "frames": 25,
+   "dtype": "bfloat16"
+  },
+  {
+   "name": "f32",
+   "w": 512,
+   "h": 896,
+   "frames": 49,
+   "dtype": "float32",
+   "tmo": 200
+  }
+ ]
+}

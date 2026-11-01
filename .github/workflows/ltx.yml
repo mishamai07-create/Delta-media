@@ -33,13 +33,14 @@ jobs:
       - uses: actions/checkout@v4
         with: {sparse-checkout: ltx, filter: "blob:none", fetch-depth: 1}
       - name: Free disk
-        run: sudo rm -rf /usr/share/dotnet /usr/local/lib/android /opt/ghc /opt/hostedtoolcache/CodeQL /usr/local/share/boost; df -h / | tail -1; nproc; free -g | head -2
+        run: sudo rm -rf /usr/share/dotnet /usr/local/lib/android /opt/ghc /opt/hostedtoolcache/CodeQL /usr/local/share/boost; df -h / | tail -1; nproc; free -g | head -3; lscpu | grep -i 'model name\|flags' | cut -c1-400
       - name: Deps
         run: pip install -q --index-url https://download.pytorch.org/whl/cpu torch torchvision && pip install -q "diffusers>=0.33" transformers accelerate sentencepiece imageio imageio-ffmpeg protobuf
       - name: Run
         run: |
           python3 -c "import json;J=json.load(open('ltx/jobs/${{ needs.plan.outputs.job }}.json'));it=[i for i in J['items'] if i['name']=='${{ matrix.name }}'][0];it={**J.get('defaults',{}),**it};json.dump(it,open('item.json','w'))"
-          python3 ltx/run.py item.json res 2>&1 | grep -v "it/s\]" | tail -60
+          mkdir -p res; export PYTHONUNBUFFERED=1
+          timeout $(python3 -c "import json;print(json.load(open('item.json')).get('tmo',150))")m python3 ltx/run.py item.json res 2>&1 | grep --line-buffered -v "it/s\]" | tee res/${{ matrix.name }}.log || true
       - uses: actions/upload-artifact@v4
         if: always()
         with: {name: "${{ matrix.name }}", path: res/, if-no-files-found: ignore}
