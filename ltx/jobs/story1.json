@@ -1,0 +1,93 @@
+{
+ "defaults": {
+  "w": 512,
+  "h": 896,
+  "frames": 49,
+  "steps": 8,
+  "cfg": 1.0,
+  "fps": 24,
+  "dtype": "float32",
+  "tmo": 300,
+  "seed": 7
+ },
+ "items": [
+  {
+   "name": "f01",
+   "image": "ltx/in/st/f01.jpg",
+   "prompt": "Cinematic video game cutscene, realistic 3D render, snowy European old town street at dusk, warm street lamps, gentle snowfall, static camera, subtle natural motion. A young man in a black jacket and cap stands on the street, looks at the camera, slightly tilts his head and frowns in disbelief, breath vapor in cold air.",
+   "frames": 65
+  },
+  {
+   "name": "f02",
+   "image": "ltx/in/st/f02.jpg",
+   "prompt": "Cinematic video game cutscene, realistic 3D render, snowy European old town street at dusk, warm street lamps, gentle snowfall, static camera, subtle natural motion. A young man in a black puffer jacket walks slowly toward the camera along the snowy sidewalk, natural walking motion.",
+   "frames": 65
+  },
+  {
+   "name": "f03",
+   "image": "ltx/in/st/f03.jpg",
+   "prompt": "Cinematic video game cutscene, realistic 3D render, snowy European old town street at dusk, warm street lamps, gentle snowfall, static camera, subtle natural motion. A young man in a yellow puffer jacket holds a smartphone, glances at it and grins excitedly, small nod.",
+   "frames": 89
+  },
+  {
+   "name": "f04",
+   "image": "ltx/in/st/f04.jpg",
+   "prompt": "Cinematic video game cutscene, realistic 3D render, snowy European old town street at dusk, warm street lamps, gentle snowfall, static camera, subtle natural motion. A young man in a beige puffer jacket with fur hood looks down at his smartphone, thumbs tapping the screen, focused expression.",
+   "frames": 73
+  },
+  {
+   "name": "f05",
+   "image": "ltx/in/st/f05.jpg",
+   "prompt": "Cinematic video game cutscene, realistic 3D render, snowy European old town street at dusk, warm street lamps, gentle snowfall, static camera, subtle natural motion. A young man in a brown jacket sits on a snowy bench, head hanging down, slowly shakes his head in despair, shoulders slumping.",
+   "frames": 65
+  },
+  {
+   "name": "f06",
+   "image": "ltx/in/st/f06.jpg",
+   "prompt": "Cinematic video game cutscene, realistic 3D render, snowy European old town street at dusk, warm street lamps, gentle snowfall, static camera, subtle natural motion. A young man in an orange and blue puffer jacket looks at his smartphone and smiles, scrolling with his thumb.",
+   "frames": 73
+  },
+  {
+   "name": "f07",
+   "image": "ltx/in/st/f07.jpg",
+   "prompt": "Cinematic video game cutscene, realistic 3D render, snowy European old town street at dusk, warm street lamps, gentle snowfall, static camera, subtle natural motion. A young man in an orange puffer jacket stands still, his smile fades, he looks to the side with a worried serious expression.",
+   "frames": 97
+  },
+  {
+   "name": "f08",
+   "image": "ltx/in/st/f08.jpg",
+   "prompt": "Cinematic video game cutscene, realistic 3D render, snowy European old town street at dusk, warm street lamps, gentle snowfall, static camera, subtle natural motion. A young man in a dark hooded jacket walks slowly, looking down, hood up, tense posture.",
+   "frames": 73
+  },
+  {
+   "name": "f09",
+   "image": "ltx/in/st/f09.jpg",
+   "prompt": "Cinematic video game cutscene, realistic 3D render, snowy European old town street at dusk, warm street lamps, gentle snowfall, static camera, subtle natural motion. Three young people in winter jackets walk away from the camera down the snowy street, natural walking motion.",
+   "frames": 57
+  },
+  {
+   "name": "f10",
+   "image": "ltx/in/st/f10.jpg",
+   "prompt": "Cinematic video game cutscene, realistic 3D render, snowy European old town street at dusk, warm street lamps, gentle snowfall, static camera, subtle natural motion. A young man in a green puffer jacket holds a coffee cup and laughs warmly, relaxed, steam rising from the cup.",
+   "frames": 65
+  },
+  {
+   "name": "f11",
+   "image": "ltx/in/st/f11.jpg",
+   "prompt": "Cinematic video game cutscene, realistic 3D render, snowy European old town street at dusk, warm street lamps, gentle snowfall, static camera, subtle natural motion. A young man in a green parka looks down at his smartphone, calm and focused, thumbs typing slowly.",
+   "frames": 73
+  },
+  {
+   "name": "f12",
+   "image": "ltx/in/st/f12.jpg",
+   "prompt": "Cinematic video game cutscene, realistic 3D render, snowy European old town street at dusk, warm street lamps, gentle snowfall, static camera, subtle natural motion. A young man in a green puffer jacket walks toward the camera holding a coffee cup, calm confident walk.",
+   "frames": 65
+  },
+  {
+   "name": "f13",
+   "image": "ltx/in/st/f13.jpg",
+   "prompt": "Cinematic video game cutscene, realistic 3D render, snowy European old town street at dusk, warm street lamps, gentle snowfall, static camera, subtle natural motion. Two young men in winter jackets stand in front of a lit shop window talking, one gestures with his hand, natural movement.",
+   "frames": 89
+  }
+ ]
+}
