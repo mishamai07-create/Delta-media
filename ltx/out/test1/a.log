@@ -1,0 +1,28 @@
+[    0.0s maxrss=  0.4GB] cpu 4 dtype torch.float32 size 512 896 49
+/home/runner/.local/lib/python3.12/site-packages/diffusers/utils/deprecation_utils.py:23: FutureWarning: `torch_dtype` is deprecated and will be removed in version 1.0.0. Please use `dtype` instead.
+  deprecate("torch_dtype", "1.0.0", _TORCH_DTYPE_DEPRECATION_MESSAGE)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:  53%|█████▎    | 115/219 [00:27<01:46,  1.03s/it][A
+Loading weights:  53%|█████▎    | 116/219 [00:29<01:56,  1.13s/it][A
+Loading weights:  53%|█████▎    | 117/219 [00:29<01:43,  1.01s/it][A
+Loading weights:  58%|█████▊    | 126/219 [00:38<01:42,  1.10s/it][A
+Loading weights:  61%|██████    | 133/219 [00:48<02:08,  1.49s/it][A
+Loading pipeline components...:  33%|███▎      | 1/3 [01:07<02:14, 67.47s/it]Loading pipeline components...:  67%|██████▋   | 2/3 [01:07<00:27, 27.98s/it]Loading pipeline components...: 100%|██████████| 3/3 [01:07<00:00, 15.25s/it]Loading pipeline components...: 100%|██████████| 3/3 [01:07<00:00, 22.64s/it]
+[  117.2s maxrss= 15.0GB] text encoder loaded
+[  191.5s maxrss= 15.0GB] prompt encoded, text encoder freed
+/home/runner/.local/lib/python3.12/site-packages/huggingface_hub/utils/_validators.py:205: UserWarning: The `local_dir_use_symlinks` argument is deprecated and ignored in `hf_hub_download`. Downloading to a local directory does not use symlinks anymore.
+  warnings.warn(
+There are modules in LTXVideoTransformer3DModel that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in AutoencoderKLLTXVideo that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+[  230.2s maxrss= 15.1GB] transformer+vae loaded
+`timesteps` were passed without `sigmas`. The timesteps are used as given, while the sigmas derived from them go through the scheduler's shifting, so the two may not be consistent. Pass `sigmas` to get a shifted schedule, or pass both `sigmas` and `timesteps` to control them separately.
+ 12%|█▎        | 1/8 [02:08<14:59, 128.54s/it][  474.6s maxrss= 15.1GB] step 2 t=993.750 took 91.4s
+ 25%|██▌       | 2/8 [03:39<10:40, 106.67s/it][  555.6s maxrss= 15.1GB] step 3 t=987.500 took 81.0s
+ 38%|███▊      | 3/8 [05:00<07:54, 94.94s/it] [  636.4s maxrss= 15.1GB] step 4 t=981.250 took 80.8s
+ 50%|█████     | 4/8 [06:21<05:57, 89.37s/it][  717.2s maxrss= 15.1GB] step 5 t=975.000 took 80.8s
+ 62%|██████▎   | 5/8 [07:42<04:18, 86.28s/it][  797.8s maxrss= 15.1GB] step 6 t=909.375 took 80.6s
+ 75%|███████▌  | 6/8 [09:03<02:48, 84.36s/it][  878.5s maxrss= 15.1GB] step 7 t=725.000 took 80.7s
+ 88%|████████▊ | 7/8 [10:23<01:23, 83.17s/it][  959.5s maxrss= 15.1GB] step 8 t=421.875 took 80.9s
+100%|██████████| 8/8 [11:44<00:00, 82.46s/it]100%|██████████| 8/8 [11:44<00:00, 88.10s/it]
+[ 1180.8s maxrss= 15.1GB] decoded 49 frames
+[ 1182.4s maxrss= 15.1GB] DONE
