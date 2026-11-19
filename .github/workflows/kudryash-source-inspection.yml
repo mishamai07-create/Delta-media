@@ -15,8 +15,10 @@ jobs:
           sparse-checkout: |
             hq/kudryash2_5_rano_zakryvaesh_pribyl_hq.mp4
           filter: blob:none
+          sparse-checkout-cone-mode: false
       - name: Inspect and make proxy
         run: |
+          sudo apt-get -qq update && sudo apt-get -qq install -y ffmpeg >/dev/null
           mkdir -p inspect
           ffprobe -v error -show_entries format=duration,size:stream=codec_name,width,height,avg_frame_rate,nb_frames -of json hq/kudryash2_5_rano_zakryvaesh_pribyl_hq.mp4 | tee inspect/metadata.json
           ffmpeg -y -hide_banner -loglevel error -i hq/kudryash2_5_rano_zakryvaesh_pribyl_hq.mp4 -vf "scale=512:910:flags=lanczos" -r 30 -c:v libx264 -preset fast -crf 19 -pix_fmt yuv420p -c:a aac -b:a 128k inspect/source_full_proxy.mp4
