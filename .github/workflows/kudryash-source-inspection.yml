@@ -23,7 +23,7 @@ jobs:
           ffprobe -v error -show_entries format=duration,size:stream=codec_name,width,height,avg_frame_rate,nb_frames -of json hq/kudryash2_5_rano_zakryvaesh_pribyl_hq.mp4 | tee inspect/metadata.json
           ffmpeg -y -hide_banner -loglevel error -i hq/kudryash2_5_rano_zakryvaesh_pribyl_hq.mp4 -vf "scale=512:910:flags=lanczos" -r 30 -c:v libx264 -preset fast -crf 19 -pix_fmt yuv420p -c:a aac -b:a 128k inspect/source_full_proxy.mp4
           ffmpeg -y -hide_banner -loglevel error -i inspect/source_full_proxy.mp4 -vf "fps=1,scale=160:284,tile=5x5" -frames:v 1 inspect/contact.jpg
-      - uses: actions/upload-artifact@v4
+      - name: Upload original HQ master\n        uses: actions/upload-artifact@v4\n        with:\n          name: original-kudryash-hq-master\n          path: hq/kudryash2_5_rano_zakryvaesh_pribyl_hq.mp4\n          retention-days: 1\n      - uses: actions/upload-artifact@v4
         with:
           name: original-kudryash-complete
           path: inspect/
